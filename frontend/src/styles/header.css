@@ -1,0 +1,77 @@
+header {
+  width: 100%;
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.banner {
+  background-color: var(--color1);
+  width: 100%;
+  height: 25vw;
+  margin: 20px 0;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+.banner::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 20%;
+  background: linear-gradient(to bottom, var(--light-color), transparent);
+}
+.banner::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 40%;
+  background: linear-gradient(to top, var(--light-color), transparent);
+}
+
+.header-menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  margin: 5% 0;
+}
+
+.header-menu h4 {
+  color: var(--color3);
+}
+
+.header-menu button h4 {
+  color: var(--light-color);
+  font-weight: 400;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0%;
+  }
+
+  10% {
+    opacity: 100%;
+  }
+  90% {
+    opacity: 100%;
+  }
+  100% {
+    opacity: 0%;
+  }
+}
+
+@media (max-width: 425px) {
+  .banner {
+    height: 20vh;
+  }
+}

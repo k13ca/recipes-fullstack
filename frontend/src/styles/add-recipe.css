@@ -1,0 +1,99 @@
+#add-recipe form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  justify-items: center;
+}
+
+#add-recipe h1 {
+  margin-bottom: 100px;
+}
+
+.add-recipe {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  gap: 100px;
+}
+
+.add-recipe-column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 50%;
+}
+
+.add-recipe h4 {
+  color: var(--color3);
+}
+
+.add-recipe button h4 {
+  color: var(--light-color);
+}
+
+.add-recipe input[type="radio"]:checked {
+  accent-color: #201335;
+  cursor: pointer;
+}
+
+.add-recipe input[type="radio"] {
+  cursor: pointer;
+}
+
+.add-recipe input[type="text"],
+.add-recipe input[type="number"],
+.add-recipe textarea {
+  all: unset;
+  border-bottom: 1px solid var(--color2);
+  border-right: 1px solid var(--color2);
+  border-radius: 0 0 20px 0;
+  width: 100%;
+  padding: 1% 5%;
+  box-sizing: border-box;
+}
+
+form button {
+  display: flex;
+  justify-self: center;
+  margin-top: 100px;
+}
+
+.multiple-options {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.multiple-option {
+  max-width: 90%;
+}
+
+.add-icon {
+  color: var(--color3);
+  font-size: 3vh;
+  cursor: pointer;
+}
+
+.add-icon:active {
+  transform: translateY(-1px);
+}
+
+@media (max-width: 768px) {
+  .add-recipe {
+    gap: 50px;
+  }
+}
+
+@media (max-width: 600px) {
+  .add-recipe {
+    gap: 20px;
+    flex-direction: column;
+    padding: 0 5%;
+  }
+
+  .add-recipe-column {
+    width: 100%;
+  }
+}

@@ -1,0 +1,12 @@
+.body {
+  min-width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+
+@media (max-width: 768px) {
+  .body {
+    flex-direction: column;
+  }
+}

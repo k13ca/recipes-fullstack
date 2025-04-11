@@ -1,0 +1,174 @@
+@import url("https://fonts.googleapis.com/css2?family=Galada&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mada:wght@200..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  box-sizing: border-box;
+  --light-color: #fdfdfd;
+  --color1: #dea47e;
+  --color2: #cd4631;
+  --color3: #1f134b;
+
+  display: grid;
+  place-items: center;
+  scroll-behavior: smooth;
+}
+
+body {
+  box-sizing: border-box;
+  background-color: var(--light-color);
+  display: flex;
+  flex-direction: column;
+  user-select: none;
+  position: relative;
+  width: 70%;
+}
+
+h1 {
+  font-family: "Galada", cursive;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--color3);
+  font-size: 5vw;
+}
+
+h2 {
+  font-family: "Galada", cursive;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--color3);
+  font-size: 2vw;
+}
+
+h3 {
+  font-family: "Mada", sans-serif;
+  font-size: 1.3vw;
+  font-weight: 400;
+  font-style: normal;
+  padding: 0;
+  margin: 0;
+  color: var(--color3);
+}
+
+h4 {
+  font-family: "Mada", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+  line-height: 0;
+  color: var(--light-color);
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.loader {
+  animation: loader-animation 2s infinite;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes loader-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+button {
+  all: unset;
+  background: var(--color2);
+  width: fit-content;
+  padding: 5px 20px;
+  color: var(--light-color);
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+  text-transform: uppercase;
+  font-size: 1em;
+}
+
+button:hover {
+  background: var(--color3);
+}
+
+button:active {
+  transform: translateY(-1px);
+}
+
+input[type="checkbox"]:checked {
+  accent-color: #201335;
+  cursor: pointer;
+}
+
+.add-recipe input[type="checkbox"] {
+  cursor: pointer;
+}
+
+footer {
+  width: 100%;
+  height: 15vh;
+  background-color: var(--color3);
+  margin-top: 100px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.footer-icons {
+  color: var(--light-color);
+  font-size: 3vh;
+  margin-right: 30px;
+  cursor: pointer;
+}
+
+hr {
+  all: unset;
+  width: 100%;
+  height: 3px;
+  background-color: var(--color3);
+  margin: 4vh 0;
+}
+
+a {
+  all: unset;
+  cursor: pointer;
+}
+
+@media (max-width: 1024px) {
+  body {
+    width: 80%;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    width: 90%;
+  }
+  h1 {
+    font-size: 6vh;
+  }
+
+  h3 {
+    font-size: 2vh;
+  }
+
+  button {
+    font-size: 0.7em;
+  }
+}
+
+@media (max-width: 425px) {
+}
